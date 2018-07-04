@@ -15,6 +15,7 @@ public class Configuration {
     public static String adminPanelLogin;
     public static String adminUsername;
     public static String adminPassword;
+    public static String pictureUpload;
     
     public static String dbUrl;
     public static String dbUrlDriver;
@@ -35,6 +36,7 @@ public class Configuration {
         adminPassword = properties.getProperty("adminPassword");
         adminPanelLogin = properties.getProperty("adminPanelLogin");
         chromeDriverPath = properties.getProperty("chromeDriverPath");
+        pictureUpload = properties.getProperty("pictureUpload");
                
     }
 }

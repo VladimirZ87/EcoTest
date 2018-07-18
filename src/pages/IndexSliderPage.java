@@ -119,7 +119,15 @@ public class IndexSliderPage extends Page {
     private void chooseLinkType() {
         WebElement typeRow = waitForElementVisibility(By.id("link_type"));
         Select rowType = new Select(typeRow);
-        rowType.selectByValue("NoLink");
+        rowType.selectByValue("InternalLink");
+    }
+    
+    private void createLinkLabel(){
+        sendTextOnField(By.id("link_label"), Helper.getRandomText());
+    }
+    
+    private void createExternalLinkUrl(){
+        sendTextOnField(By.id("internal_link_url"), Helper.getRandomUrl());
     }
 
     private void addPhoto() {
@@ -137,6 +145,8 @@ public class IndexSliderPage extends Page {
         sendTextOnTitleField();
         sendTextOnDescriptionField();
         chooseLinkType();
+        createLinkLabel();
+        createExternalLinkUrl();
         addPhoto();
         clickOnSaveButton();
     }

@@ -31,4 +31,44 @@ public class DashboardPage extends Page{
           clickOnElement(By.xpath("//*[@id=\"side-menu\"]/li[2]/a"));
           return PageFactory.initElements(getDriver(), IndexSliderPage.class);
       }
+      
+      public PhotoGalleriesPage clickOnPhotoGalleries(){
+          clickOnElement(By.xpath("//*[@id=\"side-menu\"]/li[3]/a"));
+          return PageFactory.initElements(getDriver(), PhotoGalleriesPage.class);
+      }
+      
+      public SitemapPage clickOnSitemapPage(){
+          clickOnElement(By.xpath("//*[@id=\"side-menu\"]/li[4]/a"));
+          return PageFactory.initElements(getDriver(), SitemapPage.class);
+      }
+      
+      public AllUsersPage clickOnAllUsersPage(){
+          clickOnElement(By.xpath("//*[@id=\"side-menu\"]/li[6]/ul/li[1]/a"));
+          return PageFactory.initElements(getDriver(), AllUsersPage.class);
+      }
+      
+      public NewUserPage clickNewUserPage(){
+          clickOnElement(By.xpath("//*[@id=\"side-menu\"]/li[6]/ul/li[2]/a"));
+          return PageFactory.initElements(getDriver(), NewUserPage.class);
+      }
+      
+      public ContactInfoPage clickOnContactInfoPage(){
+          clickOnElement(By.xpath("//*[@id=\"side-menu\"]/li[8]/a"));
+          return PageFactory.initElements(getDriver(), ContactInfoPage.class);
+      }
+      
+      public AllPortfolios clickOnAllPortfoliosPage(){
+          clickOnElement(By.xpath("//*[@id=\"side-menu\"]/li[7]/ul/li[1]/a"));
+          return PageFactory.initElements(getDriver(), AllPortfolios.class);
+      }
+      
+      public NewPortfoliosPage clickOnNewPortfoliosPage(){
+          clickOnElement(By.xpath("//*[@id=\"side-menu\"]/li[7]/ul/li[2]/a"));
+          return PageFactory.initElements(getDriver(), NewPortfoliosPage.class);
+      }
+      
+       public CategoriesPortfolioPage clickOnCategoriesPortfolioPage(){
+          clickOnElement(By.xpath("//*[@id=\"side-menu\"]/li[7]/ul/li[3]/a"));
+          return PageFactory.initElements(getDriver(), CategoriesPortfolioPage.class);
+      }
 }

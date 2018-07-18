@@ -1,3 +1,4 @@
+package allUser;
 
 import framework.Configuration;
 import java.io.IOException;
@@ -7,74 +8,76 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import pages.AllUsersPage;
 import pages.DashboardPage;
 import pages.IndexSliderPage;
 import pages.LoginPage;
 
-public class IndexSliderTest {
-    
+public class AllUsersPageTest {
+
     private static LoginPage loginPage;
-    private static IndexSliderPage indexSliderPage;
+    private static AllUsersPage allUsersPage;
     private static DashboardPage dashboardPage;
-    
+
     @BeforeClass
     public static void setUpClass() throws IOException {
         Configuration.init();
         loginPage = new LoginPage();
         dashboardPage = loginPage.login();
-        
     }
-    
+
     @AfterClass
     public static void tearDownClass() throws InterruptedException {
         Thread.sleep(3000);
 //        loginPage.quitDriver();
     }
-    
+
     @Before
     public void setUp() {
-        indexSliderPage = dashboardPage.clickOnIndexSlider();
+         allUsersPage = dashboardPage.clickOnAllUsersPage();
     }
-    
+
     @After
     public void tearDown() {
     }
 
-    
     @Test
-    public void testAddNewIndexSlide() {
-        for(int i = 0; i < 1; i++){
-        indexSliderPage.addIndexSlide();
-        }
+    public void testAddNewUser() {
+        allUsersPage.addUser();
     }
     
     @Test
-    public void testEditFirstSlide(){
-        indexSliderPage.editFirstIndexSlide();
-    }
-    
-    @Test
-    public void testEditLastSlide(){
-        indexSliderPage.editLastIndexSlide();
-    }
-    
-    @Test
-    public void testEditRandomSlide(){
-        indexSliderPage.editRandomIndexSlide();
+    public void testEditFirstUser(){
+        allUsersPage.editFirstUser();
     }
     
      @Test
-    public void testDeleteFirstSlide(){
-        indexSliderPage.deleteFirstIndexSlide();
+    public void testEditLastUser(){
+        allUsersPage.editLastUser();
     }
     
      @Test
-    public void testDeleteLastSlide(){
-        indexSliderPage.deleteLastIndexSlide();
+    public void testEditRandomUser(){
+        allUsersPage.editRandomUser();
     }
     
      @Test
-    public void testDeleteRandomSlide(){
-        indexSliderPage.deleteRandomIndexSlide();
+    public void testDeleteFirstUser(){
+        allUsersPage.deleteFirstUser();
+    }
+    
+      @Test
+    public void testDeleteLastUser(){
+        allUsersPage.deleteLastUser();
+    }
+    
+      @Test
+    public void testDeleteRandomUser(){
+        allUsersPage.deleteRandomUser();
+    }
+    
+      @Test
+    public void testResetRandomUserPassword(){
+        allUsersPage.randomResetPassButton();
     }
 }

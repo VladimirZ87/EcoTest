@@ -62,4 +62,11 @@ public class Page extends AbstractPage{
         inputField.sendKeys(text);
     }
     
+     public int sendNumberOnField(By locator, int numbers) {
+        WebElement inputField = waitForElementVisibility(locator);
+        inputField.clear();
+        int number = Helper.getRandomInteger();
+        return number;
+    }
+    
 }

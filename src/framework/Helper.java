@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class Helper {
     
      public static int getRandomInteger() {
-        return (int) (Math.random() * 1000);
+        return (int) (Math.random()* 1000);
     }
     
     public static int getRandomInteger(int range) {
@@ -14,7 +14,7 @@ public class Helper {
     }
     
     public static String getRandomText() {
-        return "VladaTest-" + getRandomInteger();
+        return "VTest-" + getRandomInteger();
     }
 
     public static String getRandomUrl() {
@@ -29,4 +29,27 @@ public class Helper {
         return getRandomText().concat("@gmail.com");
     }
     
+    public static String getRandomLatitude(){
+        return "44." + getRandomInteger(100000000);
+    }
+    
+    public static String getRandomLongitude(){
+        return "20." + getRandomInteger(100000000);
+    }
+    
+    public static String getRandomPhoneNumber(){
+        return "+381" + getRandomInteger(100000000);
+    }
+    
+    public static String getWorkingHours(){
+        return "08 - 19";
+    }
+    
+     public static String getRandomAddressNumber(){
+        return "" + getRandomInteger(100);
+    }
+     
+      public static String getRandomZoomNumber(){
+        return "" + getRandomInteger(10);
+    }
 }

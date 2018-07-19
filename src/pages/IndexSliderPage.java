@@ -130,6 +130,7 @@ public class IndexSliderPage extends Page {
         sendTextOnField(By.id("internal_link_url"), Helper.getRandomUrl());
     }
 
+    
     private void addPhoto() {
         WebElement UploadImg = waitForElementVisibility(By.id("index_slide_photo"));
         UploadImg.sendKeys("C:/Users/SmartPC/Desktop/Bledaooo/7.jpg");

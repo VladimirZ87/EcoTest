@@ -71,4 +71,6 @@ public class DashboardPage extends Page{
           clickOnElement(By.xpath("//*[@id=\"side-menu\"]/li[7]/ul/li[3]/a"));
           return PageFactory.initElements(getDriver(), CategoriesPortfolioPage.class);
       }
+       
+      
 }
